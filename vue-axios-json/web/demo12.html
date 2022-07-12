@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-model="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<title>服务器响应json格式的数据给客户端</title>
+	<script language="JavaScript" src="script/vue.js"></script>
+	<script language="JavaScript" src="script/axios.min.js"></script>
+	<script language="JavaScript">
+        function hello01() {
+            // var str = "{\"uname\":\"lina\",\"age\":20}";
+            // var user = JSON.parse(str);
+            // alert(typeof user);
+            // alert(user.uname + "_" + user.age);
+	        
+	        
+	        var user = {"uname":"lina","age":18};
+            alert(typeof user);
+            var userStr = JSON.stringify(user);
+            alert(userStr)
+        }
+	
+	</script>
+</head>
+<body>
+	<div id="div0">
+		
+		<input type="button" onclick="hello01()" value="OK"/>
+	</div>
+</body>
+</html>

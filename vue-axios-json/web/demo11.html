@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-model="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<title>服务器响应json格式的数据给客户端</title>
+	<script language="JavaScript" src="script/vue.js"></script>
+	<script language="JavaScript" src="script/axios.min.js"></script>
+	<script language="JavaScript">
+        window.onload = function () {
+            var vue = new Vue({
+                "el": "#div0",
+                "data": {
+                    uname: "lina",
+                    pwd: "ok"
+                },
+                methods: {
+                    axios03: function () {
+                        axios({
+	                        method:"POST",
+	                        url:"axios03",
+	                        data: {
+                                uname: vue.uname,
+		                        pwd: vue.pwd
+                            }
+                        }).then(function (value) {
+                            var data = value.data;
+                            // console.log(data);
+                            vue.uname = data.uname;
+                            vue.pwd = data.pwd;
+	                        
+                            // JSON.stringify()
+                            // Object = JSON.parse(string);
+							// String = JSON.stringify()
+	                       
+	                       
+	                       
+	                       
+	                       
+                        }).catch(function (reason) {
+
+                        });
+                    }
+                }
+            });
+        }
+	</script>
+</head>
+<body>
+	<div id="div0">
+		<input type="text" v-model:value="uname"/><br/>
+		<input type="text" v-model:value="pwd"/><br/>
+		<input type="button" @click="axios03" value="发送一个JSON格式的参数值的异步请求"/>
+	</div>
+</body>
+</html>

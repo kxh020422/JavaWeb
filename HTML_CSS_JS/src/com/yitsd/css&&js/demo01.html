@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!--内部样式表-->
+        <style type="text/css">
+            /*被style标签包围的范围是CSS环境，可以写CSS代码*/
+
+            /*标签样式表*/
+            p{
+                color: red;
+                /*
+                font-family: 华文彩云;
+                */
+            }
+
+
+
+            .f32{
+                font-size: 40px;
+                font-family: 华文彩云;
+            }
+
+
+
+        </style>
+
+
+        <!--引用外部样式表-->
+        <link rel="stylesheet" href="style/demo01.css">
+        <title>Title</title>
+    </head>
+    <body>
+        <!--
+        <p><font color="red">段落一</font></p>
+        -->
+        <p class="f20">段落二</p>
+        <p>段落三</p>
+        <p id="p4">段落四</p>    <!--id属性在整个HTML文档中，尽量保持唯一（但是重复也不会报错）-->
+        <p>段落五</p>
+
+
+        <div>
+            <!--嵌入式样式表-->
+            <p><span style="font-size: 60px;font-weight: bolder;color: chocolate">HELLO</span></p>
+            <span class="f32">World</span>
+            <p class="f32">!!!</p>
+        </div>
+
+    </body>
+</html>
+
+
+<!--
+    1：CSS 最基本的分类
+        标签样式表、类样式表(.)、ID样式表(#)
+    2：CSS 从位置上分类
+        嵌入式样式表、内部样式表、外部样式表
+-->

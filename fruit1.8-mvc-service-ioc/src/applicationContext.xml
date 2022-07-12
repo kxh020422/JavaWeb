@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans>
+    <bean id="fruitDAO" class="com.yitsd.fruit.dao.impl.FruitDAOImpl"/>
+
+
+    <bean id="fruitService" class="com.yitsd.fruit.service.impl.FruitServiceImpl">
+        <!-- property标签用来表示属性 name表示属性名 ref用来表示引用其他bean的id值-->
+        <property name="fruitDAO" ref="fruitDAO"/> <!--表示将ref="fruitDAO"对应的id="fruitDAO"->FruitServiceImpl的实例fruitDAO设置给name="fruitDAO"-->
+    </bean>
+
+
+    <bean id="fruit" class="com.yitsd.fruit.controllers.FruitController">
+        <property name="fruitService" ref="fruitService"/>
+    </bean>
+</beans>

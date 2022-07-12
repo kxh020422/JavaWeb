@@ -1,0 +1,48 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+div{
+    position: relative;
+    float: left;
+}
+#div_container{
+    width: 80%;
+    height: 100%;
+    border: 1px solid red;
+    margin-left: 10%;
+    float: left;
+    background-color: azure;
+    border-radius: 9px;
+}
+#tbl_fruit{
+    line-height: 28px;
+    width: 60%;
+    margin-top: 20%;
+    margin-left: 20%;
+}
+
+#tbl_fruit,#tbl_fruit td,#tbl_fruit tr{
+    border: gray 1px solid;
+    border-collapse: collapse;
+    text-align: center;
+    font-family: 黑体;
+    font-weight: lighter;
+    color: darkslateblue;
+}
+
+#div_fruit_list{
+    width: 100%;
+    border: yellow 0px solid;
+}
+
+.th1{
+    font-size: 21px;
+    font-family: 黑体;
+    font-weight: bold;
+}
+
+#tbl_fruit th{
+    border: gray 1px solid;
+}
